@@ -7,7 +7,7 @@ type MenuItemDetails = {
   /**
   The icon for the menu item.
   */
-  // Icon?: ReactNode;
+  Icon?: ReactNode;
   /**
   The label of the menu item.
   */
