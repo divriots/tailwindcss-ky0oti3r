@@ -25,18 +25,20 @@ type MenuProps = {
   items?: MenuItemDetails[];
 };
 
-const MenuItem = ({ Icon, label, onClick }: MenuItemDetails & { key: any; }) => (
+const MenuItem = ({ Icon, label, onClick }: MenuItemDetails & { key: any }) => (
   <HMenu.Item>
     {({ active }) => (
       <button
-        className={`${active ? 'bg-purple-500 text-white' : 'text-grey-900'
-          } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+        className={`${
+          active ? 'bg-purple-500 text-white' : 'text-grey-900'
+        } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
         onClick={onClick}
       >
         {Icon && (
           <Icon
-            className={`w-5 h-5 mr-2 ${active ? 'text-white' : 'text-grey-900'
-              }`}
+            className={`w-5 h-5 mr-2 ${
+              active ? 'text-white' : 'text-grey-900'
+            }`}
           />
         )}
         {label}
@@ -54,7 +56,7 @@ export const Menu = ({ items = [] }: MenuProps) => (
       <div>
         <HMenu.Button
           className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium
-                                 text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30
+                                 text-black bg-black rounded-md bg-opacity-20 hover:bg-opacity-30
                                  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
           Options
